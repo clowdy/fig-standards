@@ -59,15 +59,14 @@ interpreted as described in [RFC 2119].
 This example encompasses some of the rules below as a quick overview:
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
 use FooInterface;
 use BarClass as Bar;
 use OtherVendor\OtherPackage\BazClass;
 
-class Foo extends Bar implements FooInterface
-{
+class Foo extends Bar implements FooInterface {
+
     public function sampleFunction($a, $b = null)
     {
         if ($a === $b) {
@@ -152,8 +151,7 @@ There MUST be one blank line after the `use` block.
 For example:
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
 use FooClass;
 use BarClass as Bar;
@@ -174,19 +172,17 @@ The term "class" refers to all classes, interfaces, and traits.
 The `extends` and `implements` keywords MUST be declared on the same line as
 the class name.
 
-The opening brace for the class MUST go on its own line; the closing brace
+The opening brace for the class MUST go on the same line; the closing brace
 for the class MUST go on the next line after the body.
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
 use FooClass;
 use BarClass as Bar;
 use OtherVendor\OtherPackage\BazClass;
 
-class ClassName extends ParentClass implements \ArrayAccess, \Countable
-{
+class ClassName extends ParentClass implements \ArrayAccess, \Countable {
     // constants, properties, methods
 }
 ```
@@ -226,11 +222,9 @@ protected or private visibility.
 A property declaration looks like the following.
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
-class ClassName
-{
+class ClassName {
     public $foo = null;
 }
 ```
@@ -251,11 +245,9 @@ A method declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
-class ClassName
-{
+class ClassName {
     public function fooBarBaz($arg1, &$arg2, $arg3 = [])
     {
         // method body
@@ -272,11 +264,9 @@ Method arguments with default values MUST go at the end of the argument
 list.
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
-class ClassName
-{
+class ClassName {
     public function foo($arg1, &$arg2, $arg3 = [])
     {
         // method body
@@ -293,11 +283,9 @@ and opening brace MUST be placed together on their own line with one space
 between them.
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
-class ClassName
-{
+class ClassName {
     public function aVeryLongMethodName(
         ClassTypeHint $arg1,
         &$arg2,
@@ -317,11 +305,9 @@ When present, the `static` declaration MUST come after the visibility
 declaration.
 
 ```php
-<?php
-namespace Vendor\Package;
+<?php namespace Vendor\Package;
 
-abstract class ClassName
-{
+abstract class ClassName {
     protected static $foo;
 
     abstract protected function zim();
